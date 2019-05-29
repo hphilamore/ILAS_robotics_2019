@@ -1,0 +1,13 @@
+go_to_goal_import.c
+move.h -> C:/Users/hemma/Documents/SimpleIDE/ILAS_libraries/move/move.h
+move.c -> C:/Users/hemma/Documents/SimpleIDE/ILAS_libraries/move/move.c
+encoder.h -> C:/Users/hemma/Documents/SimpleIDE/ILAS_libraries/encoder/encoder.h
+encoder.c -> C:/Users/hemma/Documents/SimpleIDE/ILAS_libraries/encoder/encoder.c
+>compiler=C
+>memtype=cmm main ram compact
+>optimize=-Os
+>-m32bit-doubles
+>-fno-exceptions
+>defs::-std=c99
+>-lm
+>BOARD::ACTIVITYBOARD

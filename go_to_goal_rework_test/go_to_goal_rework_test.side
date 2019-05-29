@@ -1,0 +1,13 @@
+go_to_goal_rework_test.c
+go_to_goal.h -> C:/Users/hemma/Documents/SimpleIDE/ILAS_libraries/go_to_goal/go_to_goal.h
+go_to_goal.c -> C:/Users/hemma/Documents/SimpleIDE/ILAS_libraries/go_to_goal/go_to_goal.c
+encoder.h -> C:/Users/hemma/Documents/SimpleIDE/ILAS_libraries/encoder/encoder.h
+encoder.c -> C:/Users/hemma/Documents/SimpleIDE/ILAS_libraries/encoder/encoder.c
+>compiler=C
+>memtype=cmm main ram compact
+>optimize=-Os
+>-m32bit-doubles
+>-fno-exceptions
+>defs::-std=c99
+>-lm
+>BOARD::ACTIVITYBOARD

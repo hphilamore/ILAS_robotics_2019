@@ -7,102 +7,32 @@
 #include "encoder.h"
 
 // functions
-void encoder_update_cog(void); 
+//void encoder_update_cog(void); 
 
 // constants
 #define pi 3.14159265358979323846
 #define L 145 // Length between robot wheel centres
 
-int start_time_ms; 
-int time_ms;
-int old_time_ms;  
-int time_inc;
-
-
-
-//volatile float left_vel;
-//volatile float right_vel;
-
 
 
 // variables
-//static float encoder_vals[9] = {0, 0, 0, 0, 0, 0, 0, 0, 0}; 
+// static float encoder_vals[9] = {0, 0, 0, 0, 0, 0, 0, 0, 0}; 
 
 int main()                                    // Main function
 {
   s3_setup();
-  cog_run(encoder_update_cog, 100); 
-  float count = 0.0;
+  cog_run(encoder_update_cog, 65); 
   
-  if (s3_resetButtonCount() == 1) {
-  start_time_ms = CNT/st_msTicks;
-  time_ms = CNT/st_msTicks;
-  old_time_ms = CNT/st_msTicks;
-  
-  s3_motorSet(-75, -75, 0);
-  //s3_motorSet(0, 0, 0); 
-  //s3_enableMic();
+  //s3_motorSet(-75, -75, 0);
+  s3_motorSet(0, 0, 0); 
 
-      while(time_ms - start_time_ms < 2000){
-        
-        //encoder_update();
-        time_ms = CNT/st_msTicks;
-        time_inc = time_ms - old_time_ms;
-        //count += encoder_vals[7] * time_inc;
-        print("%d \t", time_ms - start_time_ms);
-        
-        
-        print("%f", dist_left_);
-        print("\t");
-        print("%f", dist_right_);
-        print("\t");
-        
-        print("%f", dist_left);
+      while(1){      
+        print("%f", encoder_vals[0]);
         print("\t");
         print("%f", dist_right);
-        print("\t");
-        print("%f", vel_left);
-        print("\t");
-        print("%f", vel_right);
         print("\n");
-        
-        /* 
-        print("%f", left_vel);
-        print("\t");
-        print("%f", right_vel);
-        print("\t");
-        //print("%f", count);
-        //print("\t");
-        print("%f", left_dist);
-        print("\t");
-        print("%f", right_dist);
-        print("\n");
-        */
-        
-        
-        //print("%d \n", time_ms - start_time_ms);
-        old_time_ms = time_ms;
-      
-        /*
-        print("%d", s3_readMic());
-        print("\n");
-        */
-
-        //print("%d", s3_readMic());
-        //print("\n");
-      //encoder_update();
-      /*
-      print("%d  \t", (value >> 24));
-      print("%d  \t", (value >> 16) & 0xff);
-      print("%f  \t", encoder_vals[0]); 
-      print("%f  \n", encoder_vals[1]);
-      */
-      
-
       } 
-      s3_motorSet(0, 0, 0);
       
-}
 }
 /*
 void encoder_update_cog(void) { 
@@ -156,6 +86,3 @@ void encoder_update_cog(void) {
 
 }
 */
-
-
-

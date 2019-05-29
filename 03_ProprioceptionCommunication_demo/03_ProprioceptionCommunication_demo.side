@@ -1,0 +1,11 @@
+03_ProprioceptionCommunication_demo.c
+encoder.c -> C:/Users/hemma/Documents/SimpleIDE/ILAS_libraries/encoder.c
+encoder.h -> C:/Users/hemma/Documents/SimpleIDE/ILAS_libraries/encoder.h
+>compiler=C
+>memtype=cmm main ram compact
+>optimize=-Os
+>-m32bit-doubles
+>-fno-exceptions
+>defs::-std=c99
+>-lm
+>BOARD::ACTIVITYBOARD

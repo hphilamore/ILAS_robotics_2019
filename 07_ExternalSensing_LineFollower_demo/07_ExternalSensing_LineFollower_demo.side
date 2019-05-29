@@ -1,0 +1,11 @@
+07_ExternalSensing_LineFollower_demo.c
+encoder.h -> C:/Users/hemma/Documents/SimpleIDE/ILAS_libraries/encoder/encoder.h
+encoder.c -> C:/Users/hemma/Documents/SimpleIDE/ILAS_libraries/encoder/encoder.c
+>compiler=C
+>memtype=cmm main ram compact
+>optimize=-Os
+>-m32bit-doubles
+>-fno-exceptions
+>defs::-std=c99
+>-lm
+>BOARD::ACTIVITYBOARD

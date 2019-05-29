@@ -1,0 +1,11 @@
+import_library_test.c
+s3move.h -> C:/Users/hemma/Documents/SimpleIDE/ILAS_libraries/s3move.h
+s3move.c -> C:/Users/hemma/Documents/SimpleIDE/ILAS_libraries/s3move.c
+>compiler=C
+>memtype=cmm main ram compact
+>optimize=-Os
+>-m32bit-doubles
+>-fno-exceptions
+>defs::-std=c99
+>-lm
+>BOARD::ACTIVITYBOARD

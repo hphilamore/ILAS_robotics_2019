@@ -35,13 +35,42 @@ int main()                                    // Main function
   float count = 0.0;
   
   if (s3_resetButtonCount() == 1) {
-  start_time_ms = CNT/st_msTicks;
-  time_ms = CNT/st_msTicks;
-  old_time_ms = CNT/st_msTicks;
+  //start_time_ms = CNT/st_msTicks;
+  //time_ms = CNT/st_msTicks;
+  //old_time_ms = CNT/st_msTicks;
   
+  s3_motorSet(-75, 75, 0);
+
+      //while(time_ms - start_time_ms < 2000){
+      while(fabs(dist_left_) < 227.76){
+        
+        //time_ms = CNT/st_msTicks;
+        //time_inc = time_ms - old_time_ms;
+        
+        print("%d \t", time_ms - start_time_ms);
+        print("%f", dist_left_);
+        print("\t");
+        print("%f", dist_right_);
+        print("\t");
+        
+        print("%f", dist_left);
+        print("\t");
+        print("%f", dist_right);
+        print("\t");
+        print("%f", vel_left);
+        print("\t");
+        print("%f", vel_right);
+        print("\n");
+        
+        //old_time_ms = time_ms;
+
+      } 
+      s3_motorSet(0, 0, 0); 
+  
+  /*
   s3_motorSet(-75, -75, 0);
-  //s3_motorSet(0, 0, 0); 
-  //s3_enableMic();
+ 
+
 
       while(time_ms - start_time_ms < 2000){
         
@@ -66,42 +95,11 @@ int main()                                    // Main function
         print("%f", vel_right);
         print("\n");
         
-        /* 
-        print("%f", left_vel);
-        print("\t");
-        print("%f", right_vel);
-        print("\t");
-        //print("%f", count);
-        //print("\t");
-        print("%f", left_dist);
-        print("\t");
-        print("%f", right_dist);
-        print("\n");
-        */
-        
-        
-        //print("%d \n", time_ms - start_time_ms);
         old_time_ms = time_ms;
-      
-        /*
-        print("%d", s3_readMic());
-        print("\n");
-        */
-
-        //print("%d", s3_readMic());
-        //print("\n");
-      //encoder_update();
-      /*
-      print("%d  \t", (value >> 24));
-      print("%d  \t", (value >> 16) & 0xff);
-      print("%f  \t", encoder_vals[0]); 
-      print("%f  \n", encoder_vals[1]);
-      */
-      
 
       } 
-      s3_motorSet(0, 0, 0);
-      
+      s3_motorSet(0, 0, 0); 
+      */   
 }
 }
 /*
